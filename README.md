@@ -18,11 +18,11 @@ on a database driver, graph store, RDF model, or application framework.
 The parser is intentionally split into two layers:
 
 - header parsing identifies node, relationship, and property columns;
-- row parsing converts each line into an owned [`Node`] or [`Relationship`].
+- row parsing converts each line into an owned `Node` or `Relationship`.
 
-The [`Neo4jCsvStreamParser`] API processes one physical line at a time. This
+The `Neo4jCsvStreamParser` API processes one physical line at a time. This
 keeps memory bounded for large imports and lets callers decide where records
-go. The convenience [`parse_neo4j_csv`] function is available when collecting
+go. The convenience `parse_neo4j_csv` function is available when collecting
 the complete result is appropriate.
 
 ## Quick start
@@ -44,7 +44,7 @@ assert_eq!(nodes[0].properties[0].value, "Alice");
 
 ## Streaming large imports
 
-Use [`parse_neo4j_csv_with`] to handle records as they are parsed:
+Use `parse_neo4j_csv_with` to handle records as they are parsed:
 
 ```rust
 use neo4j_csv::parse_neo4j_csv_with;
@@ -61,7 +61,7 @@ assert_eq!(relationships, 1);
 ```
 
 For input that is already available as a string, this API avoids retaining a
-second collection of parsed records. [`Neo4jCsvStreamParser`] is the lower
+second collection of parsed records. `Neo4jCsvStreamParser` is the lower
 level API for callers that read from a file, socket, or other source in their
 own I/O layer.
 
@@ -75,7 +75,7 @@ own I/O layer.
 - `age:int` or `created:string` for a property with a type hint;
 - RFC 4180 quoting, including commas and escaped double quotes inside fields.
 
-Malformed headers and rows produce the typed [`Neo4jCsvError`] error.
+Malformed headers and rows produce the typed `Neo4jCsvError` error.
 
 ## Scope
 

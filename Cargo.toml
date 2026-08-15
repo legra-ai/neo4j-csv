@@ -1,6 +1,6 @@
 [package]
 name = "neo4j-csv"
-version = "0.1.0"
+version = "0.1.1"
 description = "Streaming parser for Neo4j annotated CSV node and relationship files"
 authors = ["DataRoad Inc, Delaware, USA, trading as Legra"]
 edition = "2024"
@@ -12,6 +12,13 @@ keywords = ["neo4j", "csv", "graph", "parser", "streaming"]
 categories = ["parsing", "data-structures"]
 publish = true
 build = "build.rs"
+include = [
+    "src/**",
+    "Cargo.toml",
+    "README.md",
+    "LICENSE-*",
+    "build.rs",
+]
 
 [lib]
 doctest = true
@@ -28,4 +35,3 @@ missing_docs = "deny"
 [lints.clippy]
 all = "warn"
 pedantic = "warn"
-
