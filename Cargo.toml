@@ -1,0 +1,31 @@
+[package]
+name = "neo4j-csv"
+version = "0.1.0"
+description = "Streaming parser for Neo4j annotated CSV node and relationship files"
+authors = ["DataRoad Inc, Delaware, USA, trading as Legra"]
+edition = "2024"
+rust-version = "1.97.1"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/legra-ai/neo4j-csv"
+keywords = ["neo4j", "csv", "graph", "parser", "streaming"]
+categories = ["parsing", "data-structures"]
+publish = true
+build = "build.rs"
+
+[lib]
+doctest = true
+
+[dependencies]
+thiserror = "2.0"
+
+[build-dependencies]
+rhusky = "0.0.6"
+
+[lints.rust]
+missing_docs = "deny"
+
+[lints.clippy]
+all = "warn"
+pedantic = "warn"
+
