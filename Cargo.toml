@@ -2,7 +2,7 @@
 name = "neo4j-csv"
 version = "0.1.1"
 description = "Streaming parser for Neo4j annotated CSV node and relationship files"
-authors = ["DataRoad Inc, Delaware, USA, trading as Legra"]
+authors = ["Jacobus Geluk <jacobus.geluk@dataroad.com>"]
 edition = "2024"
 rust-version = "1.97.1"
 license = "MIT OR Apache-2.0"
