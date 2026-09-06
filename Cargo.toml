@@ -1,6 +1,6 @@
 [package]
 name = "neo4j-csv"
-version = "0.1.1"
+version = "0.2.0"
 description = "Streaming parser for Neo4j annotated CSV node and relationship files"
 authors = ["DataRoad Inc, Delaware, USA, trading as Legra"]
 edition = "2024"
@@ -26,7 +26,13 @@ include = [
 doctest = true
 
 [dependencies]
+property-graph-model = { version = "0.1", optional = true }
 thiserror = "2.0"
+
+[features]
+# Conversions from this crate's parsed records into the format-neutral
+# `property-graph-model` records used by streaming property-graph pipelines.
+property-graph-model = ["dep:property-graph-model"]
 
 [build-dependencies]
 rhusky = "0.0.6"

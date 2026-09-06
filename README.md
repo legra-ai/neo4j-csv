@@ -83,6 +83,19 @@ This crate parses Neo4j’s annotated CSV representation. It does not connect
 to Neo4j, resolve IDs across files, validate property type values, or convert
 records into another graph or RDF model.
 
+## property-graph-model records
+
+With the `property-graph-model` feature, parsed `Node` / `Relationship` /
+`Property` records convert field-for-field into the format-neutral
+[`property-graph-model`](https://crates.io/crates/property-graph-model)
+records (`PgNode` / `PgEdge` / `PgProperty`), so a streaming import
+pipeline can hand the parser's output straight to any property-graph
+consumer:
+
+```toml
+neo4j-csv = { version = "0.2", features = ["property-graph-model"] }
+```
+
 ## License
 
 Licensed under either of:
