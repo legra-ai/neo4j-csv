@@ -1,8 +1,11 @@
 //! Construction of parsed records from data rows.
 
-use crate::types::{Node, Property, Relationship};
-
 use crate::header::ColumnKind;
+use crate::types::{
+    Node,
+    Property,
+    Relationship,
+};
 
 /// Build a [`Node`] from a data row and column descriptors.
 pub(super) fn build_node(columns: &[ColumnKind], fields: &[String]) -> Node {
