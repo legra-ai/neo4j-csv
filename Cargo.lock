@@ -4,7 +4,7 @@ version = 4
 
 [[package]]
 name = "neo4j-csv"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "property-graph-model",
  "rhusky",
