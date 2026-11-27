@@ -1,6 +1,6 @@
 [package]
 name = "neo4j-csv"
-version = "0.2.2"
+version = "0.2.3"
 description = "Streaming parser for Neo4j annotated CSV node and relationship files"
 authors = ["Jacobus Geluk <jacobus.geluk@dataroad.com>"]
 edition = "2024"
