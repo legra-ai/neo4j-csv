@@ -1,6 +1,9 @@
 //! The parsed-record enum yielded by streaming parsing.
 
-use crate::types::{Node, Relationship};
+use crate::types::{
+    Node,
+    Relationship,
+};
 
 /// One parsed Neo4j CSV record.
 #[derive(Debug, Clone, PartialEq, Eq)]

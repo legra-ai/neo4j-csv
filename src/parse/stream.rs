@@ -1,9 +1,15 @@
 //! Stateful line-by-line streaming parser.
 
 use crate::error::Neo4jCsvError;
-
-use crate::header::{FileKind, ParsedHeader, parse_header};
-use crate::parse::build::{build_edge, build_node};
+use crate::header::{
+    FileKind,
+    ParsedHeader,
+    parse_header,
+};
+use crate::parse::build::{
+    build_edge,
+    build_node,
+};
 use crate::parse::csv_line::parse_csv_line;
 use crate::parse::record::Neo4jCsvRecord;
 

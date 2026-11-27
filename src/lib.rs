@@ -10,8 +10,19 @@ mod error;
 
 pub mod header;
 pub mod parse;
+#[cfg(feature = "property-graph-model")]
+pub mod pg;
 pub mod types;
 
 pub use error::Neo4jCsvError;
-pub use parse::{Neo4jCsvRecord, Neo4jCsvStreamParser, parse_neo4j_csv, parse_neo4j_csv_with};
-pub use types::{Node, Property, Relationship};
+pub use parse::{
+    Neo4jCsvRecord,
+    Neo4jCsvStreamParser,
+    parse_neo4j_csv,
+    parse_neo4j_csv_with,
+};
+pub use types::{
+    Node,
+    Property,
+    Relationship,
+};

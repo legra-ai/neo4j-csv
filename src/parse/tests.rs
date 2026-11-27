@@ -1,12 +1,14 @@
 //! Inline unit tests for Neo4j CSV row parsing.
 
 use crate::error::Neo4jCsvError;
-use crate::types::Node;
-
 use crate::parse::csv_line::parse_csv_line;
-use crate::parse::entry::{parse_neo4j_csv, parse_neo4j_csv_with};
+use crate::parse::entry::{
+    parse_neo4j_csv,
+    parse_neo4j_csv_with,
+};
 use crate::parse::record::Neo4jCsvRecord;
 use crate::parse::stream::Neo4jCsvStreamParser;
+use crate::types::Node;
 
 #[test]
 fn parse_basic_nodes() {

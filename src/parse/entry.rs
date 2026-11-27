@@ -1,10 +1,12 @@
 //! Top-level entry points for parsing a complete Neo4j CSV input.
 
 use crate::error::Neo4jCsvError;
-use crate::types::{Node, Relationship};
-
 use crate::parse::record::Neo4jCsvRecord;
 use crate::parse::stream::Neo4jCsvStreamParser;
+use crate::types::{
+    Node,
+    Relationship,
+};
 
 /// Parse a Neo4j CSV input into nodes and edges.
 ///
